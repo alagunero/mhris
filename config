@@ -1,0 +1,9 @@
+[core]
+	bare = true
+	repositoryformatversion = 0
+	filemode = false
+	symlinks = false
+	ignorecase = true
+[remote "mhris"]
+	url = https://github.com/alagunero/mhris
+	fetch = +refs/heads/*:refs/remotes/mhris/*

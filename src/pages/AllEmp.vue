@@ -9,11 +9,12 @@
     
     <div class="row">
       <div class="col-1 col-sm-3">
+      	 Search Employee *
       	 <q-input
-	        filled
+      	 	dense
+	        outlined
+	        bg-color="white"
 	        v-model="name"
-	        label="Search Employee *"
-	        hint="Employee Name"
 	      />
 	      <!-- lazy-rules
 	        :rules="[ val => val && val.length > 0 || 'Please type something']" -->
@@ -26,12 +27,13 @@
     </div>
     <div class="row">
     	<div class="col-1 col-sm-3">
-    		<q-select outlined v-model="model" :options="options" label="View" />
+    		View
+    		<q-select dense outlined bg-color="white" v-model="sview" :options="options" />
     	</div>
     </div>
     <div class="row">
     	<div class="col-1 col-sm-12" style="min-height: 100px">
-		    <q-expansion-item>
+		    <q-expansion-item dense>
 		        <template v-slot:header>
 		          <q-item-section avatar>
 		            <q-icon color="blue" name="control_point" />
@@ -44,21 +46,29 @@
 		          <q-card-section>
 		          	<div class="row">
 		          		<div class="col-1 col-sm-3">
-		          		  <q-select outlined v-model="model" :options="options" label="Employment Status" />
+		          		 Employment Status
+		          		  <q-select dense outlined v-model="model" :options="options" />
 		          		</div>
+		          		<div class="col-1 col-sm-1"></div>
 		          		<div class="col-1 col-sm-3">
-		          		  <q-select outlined v-model="model" :options="options" label="Department" />
+		          		  Department
+		          		  <q-select dense outlined v-model="model" :options="options" />
 		          		</div>
 		          	</div>
 		            <div class="row">
 		            	<div class="col-1 col-sm-3">
-		            		<q-select outlined v-model="model" :options="options" label="Location" />
+		            	   Location
+		            		<q-select dense outlined v-model="model" :options="options"  />
 		            	</div>
+		            	<div class="col-1 col-sm-1"></div>
 		            	<div class="col-1 col-sm-3">
-		            		<q-select outlined v-model="model" :options="options" label="Position" />
+		            	   Position
+		            		<q-select dense outlined v-model="model" :options="options" />
 		            	</div>
+		            	<div class="col-1 col-sm-1"></div>
 		            	<div class="col-1 col-sm-3">
-		            		<q-select outlined v-model="model" :options="options" label="Status" />
+		            	    Status
+		            		<q-select dense outlined v-model="model" :options="options" />
 		            	</div>
 		            </div>
 		          </q-card-section>
@@ -75,7 +85,8 @@
     </q-form>
 
     <q-table
-      title="Treats"
+      dense
+      title="Sample"
       :data="data"
       :columns="columns"
       row-key="name"
@@ -88,17 +99,11 @@
         >
         <q-space />
         <q-select
-          v-model="visibleColumns"
+          v-model="qsort"
           multiple
           outlined
           dense
           options-dense
-          :display-value="$q.lang.table.columns"
-          emit-value
-          map-options
-          :options="columns"
-          option-value="name"
-          options-cover
           style="min-width: 250px"
         />
       </template>

@@ -1,10 +1,7 @@
 <template>
-
-  <q-page class="flex flex-center">
-
-		<div class="q-pa-md">		   
+	<div class="q-pa-md">
 			<div class="row">
-		      <div class="col-4">
+		      <div class="col-1 col-sm-3">
 		      	<q-card  flat bordered class="my-card">
 			      <q-card-section>
 			        <div class="text-h6">Reminders</div>
@@ -19,8 +16,8 @@
 			      </q-card-section>
 			    </q-card>
 		      </div>
-		      <div class="col-1"></div>
-		      <div class="col-7">
+		      <div class="col-1 col-sm-1"></div>
+		      <div class="col-1 col-sm-8" style="min-height: 150px">
 		      	<q-card flat bordered class="my-card">
 			      <q-card-section>
 			        <div class="text-h6">Shortcuts</div>
@@ -36,9 +33,9 @@
 			    </q-card>
 		  	  </div>
 		  </div>
-			<div class="row">
-		      <div class="col-4">
-		      	<q-card  flat bordered class="my-card col-4">
+		  <div class="row">
+		      <div class="col-1 col-sm-3">
+		      	<q-card  flat bordered class="my-card">
 			      <q-card-section>
 			        <div class="text-h6">New Employee Trend Graph</div>
 			      </q-card-section>
@@ -52,8 +49,8 @@
 			      </q-card-section>
 			    </q-card>
 		      </div>
-		      <div class="col-1"></div>
-		      <div class="col-7">
+		      <div class="col-1 col-sm-1"></div>
+		      <div class="col-1 col-sm-8">
 		      	<q-card flat bordered class="my-card col-7">
 			      <q-card-section>
 			        <div class="text-h6">Report Tiles</div>
@@ -69,10 +66,7 @@
 			    </q-card>
 		  	  </div>
 		  </div>
-
-		</div>
-	  </q-page>
-
+	</div>
 </template>
 
 <script>

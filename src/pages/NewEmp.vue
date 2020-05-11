@@ -5,12 +5,9 @@
       <div class="col-1 col-sm-6">
         <q-card flat bordered class="my-card">
           <q-card-section>
-            
-              <q-card flat bordered class="my-card" style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
-                <q-card-section>
-                  <div class="text-h6" style="text-align: center;">Primary Information</div>
-                </q-card-section>
-              </q-card>
+            <div class="text-h6 text-white bg-blue-10" style=";text-align: Left;">
+              Primary Information
+            </div>
           </q-card-section>
 
           <q-separator inset />
@@ -18,35 +15,53 @@
           <q-card-section>
             <div class="row">
               <div class="col-1 col-sm-5" style="min-height: 70px">
-                <q-input square outlined v-model="text" label="Employee ID" style="font-size: 15px;" />
+                Employee ID
+                <q-input dense outlined v-model="empid" style="font-size: 15px;" />
               </div>
               <div class="col-1 col-sm-2"></div>
               <div class="col-1 col-sm-5">
-                <q-input square outlined v-model="text" label="Nickname" style="font-size: 15px;"/>
+                Nickname
+                <q-input dense outlined v-model="nick"  style="font-size: 15px;"/>
               </div>
             </div>
             <div class="row">
               <div class="col-1 col-sm-5" style="min-height: 70px">
-                <q-input square outlined v-model="text" label="First Name" />
+                First Name
+                <q-input dense outlined v-model="fname" />
               </div>
               <div class="col-1 col-sm-2"></div>
               <div class="col-1 col-sm-5">
-                <q-input square outlined v-model="text" label="Last Name" />
+                Last Name
+                <q-input dense outlined v-model="lname" />
               </div>
             </div>
             <div class="row">
               <div class="col-1 col-sm-5" style="min-height: 70px">
-                <q-input square outlined v-model="text" label="Middle Name" />
+                Middle Name
+                <q-input dense outlined v-model="mname" />
               </div>
               <div class="col-1 col-sm-2"></div>
+
               <div class="col-1 col-sm-5">
-                <q-radio v-model="sex" val="Female" label="Female" />
-                <q-radio v-model="sex" val="Male" label="Male" />
-              </div>
+                <div class="row">
+                  <div class="col-1 col-sm-2" style="min-height: 30px">
+                    Gender
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-1 col-sm-5">
+                    <q-radio dense v-model="sex" val="Female" label="Female" />
+                  </div>
+                  <div class="col-1 col-sm-5">
+                    <q-radio dense v-model="sex" val="Male" label="Male" />
+                  </div>
+                </div>
+              </div>              
             </div>
             <div class="row">
               <div class="col-1 col-sm-5" style="min-height: 70px">
-                <q-expansion-item>
+                Birthdate
+                <q-expansion-item dense>
                     <template v-slot:header>
                       <q-item-section avatar>
                         <q-icon color="blue" name="today" />
@@ -64,16 +79,19 @@
               </div>
               <div class="col-1 col-sm-2"></div>
               <div class="col-1 col-sm-5">
-                <q-input square outlined v-model="text" label="Age" style="font-size: 15px;"/>
+                Age
+                <q-input dense outlined v-model="age" style="font-size: 15px;"/>
               </div>
             </div>
             <div class="row">
               <div class="col-1 col-sm-5" style="min-height: 70px">
-                <q-input square outlined v-model="text" label="Mobile Ph" style="font-size: 15px;" />
+                Mobile Ph
+                <q-input dense outlined v-model="mobph" style="font-size: 15px;" />
               </div>
               <div class="col-1 col-sm-2"></div>
               <div class="col-1 col-sm-5">
-                <q-select outlined v-model="model" :options="options" label="Marital Status" />
+                Marital Status
+                <q-select dense outlined v-model="mstat" :options="options" />
               </div>
             </div>
           </q-card-section>
@@ -82,27 +100,19 @@
       <div class="col-1 col-sm-6">
         <q-card flat bordered class="my-card">
           <q-card-section>
-            
-              <q-card flat bordered class="my-card" style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
-                <q-card-section>
-                  <div class="text-h6" style="text-align: center;">Designation</div>
-                </q-card-section>
-              </q-card>
+            <div class="text-h6 text-white bg-blue-10" style=";text-align: Left;">
+              Designation
+            </div>
           </q-card-section>
 
           <q-separator inset />
 
           <q-card-section>
-            <div class="row">
-              <div class="col-1 col-sm-5">
-                Hired Date*
-              </div>
-              <div class="col-1 col-sm-2"></div>
-              <div class="col-1 col-sm-5"></div>
-            </div>
+
             <div class="row">
               <div class="col-1 col-sm-5" style="min-height: 70px">
-                <q-expansion-item>
+                Hired Date*
+                <q-expansion-item dense>
                     <template v-slot:header>
                       <q-item-section avatar>
                         <q-icon color="blue" name="today" />
@@ -119,31 +129,37 @@
                 </q-expansion-item>
               </div>
               <div class="col-1 col-sm-2"></div>
-              <div class="col-1 col-sm-5">
-                <q-select outlined v-model="model" :options="options" label="Assigned Position" />
+              <div class="col-1 col-sm-5" style="min-height: 70px">
+                Assigned Position
+                <q-select dense outlined v-model="apos" :options="options" />
               </div>
             </div>
             <div class="row">
               <div class="col-1 col-sm-5" style="min-height: 70px">
-                <q-select outlined v-model="model" :options="options" label="Location" />
+                Location
+                <q-select dense outlined v-model="loc" :options="options" />
               </div>
               <div class="col-1 col-sm-2"></div>
               <div class="col-1 col-sm-5">
-                <q-select outlined v-model="model" :options="options" label="Department" />
+                Department
+                <q-select dense outlined v-model="dept" :options="options" />
               </div>
             </div>
             <div class="row">
               <div class="col-1 col-sm-5" style="min-height: 70px">
-                <q-select outlined v-model="model" :options="options" label="Reporting To" />
+                Reporting To
+                <q-select dense outlined v-model="repto" :options="options" />
               </div>
               <div class="col-1 col-sm-2"></div>
               <div class="col-1 col-sm-5">
-                <q-select outlined v-model="model" :options="options" label="Employment Status" />
+                Employment Status
+                <q-select dense outlined v-model="empstat" :options="options" />
               </div>
             </div>
             <div class="row">
               <div class="col-1 col-sm-8" style="min-height: 70px">
-                <q-input square outlined v-model="text" label="Company Assigned Email" style="font-size: 15px;"/>
+                Company Assigned Email
+                <q-input dense outlined v-model="compmail" style="font-size: 15px;"/>
               </div>
               <div class="col-1 col-sm-4"></div>
             </div>
@@ -156,12 +172,9 @@
       <div class="col-1 col-sm-6">
         <q-card flat bordered class="my-card">
           <q-card-section>
-            
-              <q-card flat bordered class="my-card" style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)">
-                <q-card-section>
-                  <div class="text-h6" style="text-align: center;">Address Details</div>
-                </q-card-section>
-              </q-card>
+            <div class="text-h6 text-white bg-blue-10" style=";text-align: Left;">
+              Address Details
+            </div>
           </q-card-section>
 
           <q-separator inset />
@@ -169,22 +182,27 @@
           <q-card-section>
            <div class="row">
               <div class="col-1 col-sm-6" style="min-height: 70px">
-                <q-input square outlined v-model="text" label="Street Address" style="font-size: 15px;" />
+                Street Address
+                <q-input dense outlined v-model="street" style="font-size: 15px;" />
               </div>
               <div class="col-1 col-sm-1"></div>
               <div class="col-1 col-sm-5">
-                <q-select outlined v-model="model" :options="options" label="City" />
+                City
+                <q-select dense outlined v-model="city" :options="options" />
               </div>
            </div>
            <div class="row">
               <div class="col-1 col-sm-5" style="min-height: 70px">
-                <q-select outlined v-model="model" :options="options" label="Country" />
+                Country
+                <q-select dense outlined v-model="country" :options="options" />
               </div>
               <div class="col-1 col-sm-4">
-                <q-input square outlined v-model="text" label="Brgy" style="font-size: 15px;" />
+                Brgy
+                <q-input dense outlined v-model="brgy" style="font-size: 15px;" />
               </div>
               <div class="col-1 col-sm-3">
-                <q-input square outlined v-model="text" label="Zip Code" style="font-size: 15px;" />
+                Zip Code
+                <q-input dense outlined v-model="text" style="font-size: 15px;" />
               </div>
            </div>
           </q-card-section>
@@ -194,32 +212,33 @@
         <q-card flat bordered class="my-card">
           <q-card-section>
             <div class="row">
-              <div class="col-1 col-sm-12" style="min-height: 70px">
-                <q-checkbox size="lg" v-model="newcon" val="onboard" label="Automatically send onboarding message to this employee?" />
+              <div class="col-1 col-sm-12" style="min-height: 60px">
+                <q-checkbox size="lg" v-model="newcon" name="onboard" val="onboard" label="Automatically send onboarding message to this employee?" />
               </div>
            </div>
            <div class="row">
-              <div class="col-1 col-sm-12" style="min-height: 70px">
-                <q-checkbox size="lg" v-model="newcon" val="access" label="Auto-grant Employee Portal access?" />
+              <div class="col-1 col-sm-12" style="min-height: 60px">
+                <q-checkbox size="lg" v-model="newcon" name ="access" val="access" label="Auto-grant Employee Portal access?" />
               </div>
            </div>
            <div class="row">
-              <div class="col-1 col-sm-12" style="min-height: 70px">
-                <q-checkbox size="lg" v-model="newcon" val="new" label="Enter more employee details to this employee after saving the record" />
+              <div class="col-1 col-sm-12" style="min-height: 60px">
+                <q-checkbox size="lg" v-model="newcon" name="new" val="new" label="Enter more employee details to this employee after saving the record" />
               </div>
            </div>
           </q-card-section>
         </q-card>
         <div class="row">
               <div class="col-1 col-sm-8" style="min-height: 70px"></div>
-              <div class="col-1 col-sm-2" style="min-height: 70px">
+              <div class="col-1 col-sm-2" style="min-height: 70px">                
                 <div class="column items-end">
-                  <q-btn label="Add" type="submit" color="primary" to="/profile/newemp"/>
+                  <q-btn label="Add" type="submit" color="primary"                     
+                   to="/profile/addemp"/>                   
                 </div>                
               </div>
               <div class="col-1 col-sm-2" style="min-height: 70px">
                 <div class="column items-end">
-                  <q-btn label="Cancel" type="submit" color="secondary" to="/"/>
+                  <q-btn label="Cancel" type="submit" color="secondary" to="/home"/>
                 </div>                
               </div>
         </div>

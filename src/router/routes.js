@@ -9,6 +9,15 @@ const routes = [
   },
 
   {
+    path: '/',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: 'home', component: () => import('pages/Home.vue') }
+    ]
+  },
+
+
+  {
     path: '/profile',
     component: () => import('layouts/Profile.vue'),
     children: [
@@ -21,6 +30,14 @@ const routes = [
     component: () => import('layouts/Profile.vue'),
     children: [
       { path: 'newemp', component: () => import('pages/NewEmp.vue') }
+    ]
+  },
+
+  {
+    path: '/profile',
+    component: () => import('layouts/Profile.vue'),
+    children: [
+      { path: 'addemp', component: () => import('pages/AddEmp.vue') }
     ]
   }
 ]

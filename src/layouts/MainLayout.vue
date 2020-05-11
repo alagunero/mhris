@@ -1,31 +1,55 @@
 <template>
-  <q-layout view="hHh Lpr lff">
-    <q-header elevated class="bg-black">
+  <q-layout view="hHh Lpr lff" class="bg-brown-1">
+<!--     <q-header elevated class="bg-black">
         <q-toolbar>
           <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
           <q-toolbar-title>mHRIS</q-toolbar-title>
         </q-toolbar>
-      </q-header>
+      </q-header> -->
 
     <q-drawer
       v-model="drawer"
       show-if-above
 
      :mini="miniState"
-        @mouseover="miniState = false"
-        @mouseout="miniState = true"
-
-        :width="300"
+     :width="300"
         :breakpoint="600"
         bordered
-        content-class="bg-grey-3"
+        content-class="text-white bg-blue-grey-8"
     >
       <q-scroll-area class="fit">
           <q-list padding>
 
+            <q-item>
+              <q-item-section avatar>
+                <q-btn flat @click="miniState = !miniState " round dense icon="menu" />
+              </q-item-section>
+
+               <q-item-section>
+                HRIS Menu
+              </q-item-section>
+
+            </q-item>
+
+            <q-separator />
+            
+            <q-item>
+              <q-item-section avatar>
+                <q-icon name="account_circle" />
+              </q-item-section>
+
+              <q-item-section>
+                <q-avatar size="70px" class="q-mb-sm">
+                  <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+                </q-avatar>
+                <div class="text-weight-bold">Razvan Stoenescu</div>
+                <div>@rstoenescu</div>
+              </q-item-section>
+            </q-item>
+
             <q-separator />
 
-            <q-item clickable v-ripple>
+            <q-item clickable v-ripple to="/home">
               <q-item-section avatar>
                 <q-icon name="home" />
               </q-item-section>
@@ -36,7 +60,7 @@
             </q-item>
 
             <q-expansion-item
-              icon="account_box"
+              icon="folder_shared"
               label="Employee Profile"
             > 
               <q-item inset-level="1" clickable v-ripple to="/profile/allemp">
@@ -77,7 +101,7 @@
               </q-item>
               <q-item inset-level="1" clickable v-ripple>
                 <q-item-section avatar>
-                  <q-icon name="event" />
+                  <q-icon name="notifications" />
                 </q-item-section>
 
                 <q-item-section>
